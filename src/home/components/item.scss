@@ -1,0 +1,80 @@
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+.item-container {
+    font-size: 1.8em;
+    height:77px;
+    width:193px;
+    // background: #2d2d2d;
+    background: black;
+    margin: 0 auto;
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(0,0,0,0.1); 
+    display: inline-flex;
+    justify-content: center;
+    
+}
+
+@include keyframes(fuzz-out) {
+  0% { text-shadow: 2 0 3px #BB2A4D; }
+  50% { text-shadow: 0 0 12px #BB2A4D;  }
+  100% { text-shadow: 2 0 3px #BB2A4D; }
+}
+
+.item-name {
+  position: relative;
+    text-align: center;
+    // text-shadow: 0 0 10px #BB2A4D;
+    // color:#BB2A4D;
+    color:rgba(0,0,0,0.1);
+    // opacity: 0.5;   
+}
+
+.fuzzOut{
+  @include animation('fuzz-out 5s ease-in-out infinite');
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(100);
+  }
+  to {
+    transform: translateY((-100%));
+  }
+}
+
+@keyframes scroll{
+    0%   {left: 300px;}
+    100% {left: -350px;}
+}
+
+@-webkit-keyframes scroll{
+    0%   {left: 300px;}
+    100% {left: -350px;}
+}

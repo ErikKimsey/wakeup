@@ -1,0 +1,46 @@
+$medium-large-break: 1200px;
+$medium-break: 1060px;
+$medium-small-break: 660px;
+$small-break: 500px;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+.home-container {
+  position: relative;
+	padding: 0 11px;
+    box-sizing: border-box;
+    margin: 5px 10% 5px 10%;
+    @media screen and (max-width: $medium-large-break) {
+        margin: 5px 10% 5px 10%;
+    }
+    @media screen and (max-width: $medium-break) {
+        margin: 5px 5% 5px 5%;
+    }
+    @media screen and (max-width: $medium-small-break) {
+        margin: 5px 1% 5px 1%;
+    }
+}   
+
+.name-glitch {
+    width:auto;
+    margin: 10% 10%;
+    font-size: 4em;
+    position: fixed;
+    margin-top: 285px;
+    z-index: 1000;
+}
+
+.fadeHeader {
+    opacity:0;
+    transition: opacity, 4s ease-in;
+    // margin-top: 0px;
+    z-index: 1000;
+    // font-size: 12em;
+    transform: scale(0,0);
+}

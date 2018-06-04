@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    /* color:white; */
+}
+
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    /* font-size: 4vw; */
+}
+
+.liquid-container {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-left: -10%;
+    margin-top: -10%; */
+}
+
+.ioimg {
+    width:100%;
+    display: none;
+}
+
+#dripVid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 50%;
+    display: none;
+    /* color: #f1f1f1; */
+    width: 80%;
+    height: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+/* .dialog-state {
+    font-size: 4em;
+    color: white;
+} */
+
+#logo {
+    position: relative;
+    /* opacity: 1; */
+    width: 80%;
+    /* margin-left: 19%; */
+    margin-top: 5%;
+    margin: 0 auto;
+
+}
+.menu {
+    font-size: 1.2em;
+    width: 89%;
+    text-align-last: justify;
+    margin: 0 auto;
+    margin-left: -4%;
+    /* margin-top: 15%; */
+    font-weight: 100;
+    padding: 0% 8%;
+}
+
+/* @media only screen and (min-device-width : 972px) and (max-device-width : 1366px) {
+    .content {
+        margin: 12% 7%;
+        width: 80%;
+    }
+    .liquid-container {
+        position: absolute;
+        width: 58%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+} */
+
+
+@media (max-width: 1060px) {
+
+       .liquid-container {
+        position: absolute;
+        width: 58%;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .menu {
+   
+    }
+}
+
+@media (max-width: 760px) {
+    .content {
+        position: absolute;
+        width: 90%;
+        margin-top: 20%;
+    }
+
+    #logo {
+        /* opacity: .9; */
+        width: 100%;
+        margin-top: 5%;
+        margin: 0 auto;
+        margin-left: 0%;
+    }
+    .menu {
+        font-size: 1.2em;
+        text-align-last: justify;
+        margin: 0 auto;
+        /* margin-left: 22%;
+        margin-top: 15%; */
+        font-weight: 100;
+    }
+}
+
+/* Landscape */
+@media (max-device-width: 760px) and (orientation:landscape) {
+/* Landscape styles */
+    .content {
+        position: absolute;
+        width: 67%;
+        margin-top: -4%;
+    }
+
+    #logo {
+        /* opacity: .9; */
+        width: 100%;
+        margin-top: 5%;
+        margin: 0 auto;
+        margin-left: 0%;
+    }
+    .menu {
+        font-size: 1.2em;
+        text-align-last: justify;
+        margin: 0 auto;
+        /* margin-left: 22%;
+        margin-top: 15%; */
+        font-weight: 100;
+    }
+}
+
+

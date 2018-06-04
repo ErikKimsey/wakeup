@@ -1,0 +1,77 @@
+
+
+// .blue-narrative {
+//     color: rgb(126, 237, 254);
+
+// }
+
+// .red-narrative {
+//     color: rgb(250, 47, 148);
+// }
+
+.narrative-pos {
+  margin-top: 20%;
+}
+
+.narrative{
+  color:white;
+//   font-size:100px;
+  position:relative;
+//   width:400px;
+  margin:0 auto;
+  font-size: 3em;
+  margin-left: 20%;
+}
+$steps:20;
+@keyframes noise-anim{
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.narrative:after{
+  content:attr(data-text);
+  position:absolute;
+//   font-size: 2em;
+  left:2px;
+  text-shadow:-2px -1px red;
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,1600px,100px,0); 
+  animation:noise-anim 1s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.narrative:before{
+  content:attr(data-text);
+  position:absolute;
+//   font-size: 2em;
+  left:-2px;
+  text-shadow:2px 1px blue; 
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,1600px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.skip-intro {
+    position: absolute;
+    top:30%;
+    left:80%;
+    text-shadow:2px 10px 4px rgb(146, 255, 228);
+    color:rgba(0, 0, 0, 0);
+    font-size: 2em;
+    line-height: 2em;
+    padding:3px;
+}
